@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到小食店，请您注册</title>
+
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+<header>
+
+</header>
+<section>
+    <!-- 背景颜色 -->
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="box">
+        <!-- 背景圆 -->
+        <div class="circle" style="--x:0" id="circle1"></div>
+        <div class="circle" style="--x:1"></div>
+        <div class="circle" style="--x:2"></div>
+        <div class="circle" style="--x:3"></div>
+        <div class="circle" style="--x:4"></div>
+        <!-- 登录框 -->
+        <div class="container" id="div1">
+            <div class="form">
+                <form action="./register" method="post" th:action="@{/register}">
+
+                    <div id="divLeft">
+                        
+                            <div class="LText">用&nbsp&nbsp&nbsp户&nbsp&nbsp&nbsp名：</div>
+                        
+                        
+                        <div class="LText">密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp码：</div>
+                        <div class="LText">确&nbsp认&nbsp密&nbsp码：&nbsp&nbsp&nbsp</div>
+                        <div class="LText">邮&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp箱：</div>
+                        <div class="LText">收&nbsp货&nbsp地&nbsp址：</div>
+                        <div class="LText">手&nbsp机&nbsp号&nbsp码：</div>
+                        <div class="LText">手机验证码：</div>
+                    </div>
+
+                    <div id="divRight">
+                        <input class="input-right" type="text" id="yhmts"
+                        readonly  unselectable="on" value="用户名为英文字母加数字" >
+                        <input class="input-right" type="text" id="mmts" 
+                        readonly  unselectable="on" value="密码为大小写字母加数字">
+                        <input class="input-right" type="text" id="smmts" 
+                        readonly  unselectable="on" value="两次密码要一致">
+                        <input class="input-right" type="text" id="yxts" 
+                        readonly  unselectable="on" value="邮箱格式要正确">
+                        <input class="input-right" type="text" id="dzts" 
+                        readonly  unselectable="on" value="地址必填">
+                        <input class="input-right" type="text" id="sjhts" 
+                        readonly  unselectable="on" value="请输入正确的手机号">
+                        <input class="input-right" type="text" id="yzmts" 
+                        readonly  unselectable="on" value="请输入验证码">
+                    </div>
+
+                    <div id="divCenter">
+                        <div class="" id="username">
+                            <input type="text" placeholder="请输入用户名" 
+                            class="shurukuang" id="uname" onfocus="checkname()">
+                        </div>
+                        <div class="" id="password"> 
+                            <input type="password" placeholder="请输入密码" 
+                            class="shurukuang" id = "pwd" onfocus="checkpwd()"> 
+                        </div>
+                        <div class="" id="surepassword">
+                            <input type="password" placeholder="请输入确认密码" 
+                            class="shurukuang" id = "spwd" onblur="checkspwd()">
+                        </div>
+                        <div class="" id="email">
+                            <input type="email" placeholder="请输入邮箱账号" 
+                            class="shurukuang" id = "uemail" onblur="checkemail()">
+                        </div>
+                        <div class="" id="address">
+                            <input type="text" placeholder="请输入收货地址" 
+                            class="shurukuang" id = "addr" onblur="checkaddr()">
+                        </div>
+                        <div class="" id="phone">
+                            <input type="text" placeholder="请输入手机号码" 
+                            class="shurukuang" id = "phn" onblur="checkphone()">
+                        </div>
+                        <div class="" id="code">
+                            <input type="text" placeholder="请输入6位手机验证码" 
+                            class="shurukuang" id = "phcode">
+                        </div> 
+                    </div>
+                    <div id="divButtom">
+                        <input type="button" value="获取验证码">
+                        <input type="submit" value="注册" id = "log" onclick="return Submit()">
+                        <input type="reset" value="清空">
+                        <a href="login.html">已有账号？前往登录</a>
+                        <a href="forget.html">忘记密码？前去找回</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+</footer>
+</body>
+</html>
+<script src="/javaScript/register.js"></script>
